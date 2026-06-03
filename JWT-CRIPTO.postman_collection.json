@@ -1,0 +1,155 @@
+{
+  "info": {
+    "_postman_id": "53ffe928-be4c-49e2-bc8c-cdf24e79e41c",
+    "name": "JWT-CRIPTO",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50590300",
+    "_collection_link": "https://go.postman.co/collection/50590300-53ffe928-be4c-49e2-bc8c-cdf24e79e41c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Registrar User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"adoptante_pedro\",\r\n    \"password\": \"mi_clave_secreta_123\",\r\n    \"rol\": \"USER\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/auth/registrar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "auth",
+            "registrar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Registrar Admin",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"voluntario_carlos\",\r\n    \"password\": \"mi_clave_secreta_123\",\r\n    \"rol\": \"ADMIN\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/auth/registrar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "auth",
+            "registrar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login-Token",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"voluntario_carlos\",\r\n    \"password\": \"mi_clave_secreta_123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Perfil",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJLcmFrZURldkJhY2tlbmQiLCJzdWIiOiJ2b2x1bnRhcmlvX2NhcmxvcyIsImlhdCI6MTc4MDQ0NDkzNywiZXhwIjoxNzgwNDQ4NTM3LCJyb2wiOiJBRE1JTiJ9.aAwnuPGhUlAONoPtmnVnBAC87uQJUIXnperBLa8AQ4o",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/auth/perfil",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "auth",
+            "perfil"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "logout",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJLcmFrZURldkJhY2tlbmQiLCJzdWIiOiJ2b2x1bnRhcmlvX2NhcmxvcyIsImlhdCI6MTc4MDQ0NDkzNywiZXhwIjoxNzgwNDQ4NTM3LCJyb2wiOiJBRE1JTiJ9.aAwnuPGhUlAONoPtmnVnBAC87uQJUIXnperBLa8AQ4o",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/auth/logout",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "auth",
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
