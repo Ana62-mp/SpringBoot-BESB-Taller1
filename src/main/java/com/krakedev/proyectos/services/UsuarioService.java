@@ -39,17 +39,5 @@ public class UsuarioService {
         return null;
     }
     
-    public boolean autenticar(String username, String password) {
-		Optional<Usuario> usuarioEncontrado = usuarioRepository.findByUsername(username);
-		
-		if(usuarioEncontrado.isPresent()) {
-			Usuario usuario = usuarioEncontrado.get();
-			
-			if(BCrypt.checkpw(password, usuario.getPassword())) {
-				return true;
-			}
-			
-		}
-		return false;
-	}
+ 
 }
