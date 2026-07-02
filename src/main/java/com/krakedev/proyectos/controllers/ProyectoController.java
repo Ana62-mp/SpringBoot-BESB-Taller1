@@ -72,6 +72,7 @@ public class ProyectoController {
 		}
 	}
 
+	@PreAuthorize("hasRole('ADMIN')")
 	@PutMapping("/{id}")
 	public ResponseEntity<?> actualizar(@PathVariable int id, @RequestBody Proyecto datos) {
 		try {
