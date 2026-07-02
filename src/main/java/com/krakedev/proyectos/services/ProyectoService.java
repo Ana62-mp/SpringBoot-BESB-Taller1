@@ -49,4 +49,8 @@ public class ProyectoService {
         proyectoRepository.delete(proyectoExistente);
         return true;
     }
+    
+    public Long contarProyectos() {
+        return proyectoRepository.count();
+    }
 }
